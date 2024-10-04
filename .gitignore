@@ -1,4 +1,5 @@
 temp/
 _site/
 .jekyll-cache/
+.vscode/
 .DS_Store
