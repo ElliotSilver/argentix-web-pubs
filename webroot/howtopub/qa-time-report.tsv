@@ -1,0 +1,4 @@
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ca.argentixinfo.howtopub.json	2987	-	0	0	0	0	0	0	2	16	0	0	0	0	0	0	0	1	0	0	123	44	0	0	0	3	0	3
+fsh-generated/resources/Patient-PatientExample.json	266	6	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	12	17	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-MyPatient.json	615	4	0	0	0	0	0	77	0	45	0	0	0	0	0	0	0	0	0	0	471	733	0	0	0	14	1	1

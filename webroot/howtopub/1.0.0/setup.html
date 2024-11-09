@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Setting up the Publication Environment - How to Publish a FHIR Implementation Guide v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">How to Publish a FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - release
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="setup.html">Setup</a>
+  </li>
+  <li>
+    <a href="publication.html">Publication</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="about.html">About</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Setting up the Publication Environment</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the How to Publish a FHIR Implementation Guide (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Setting up the Publication Environment</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>Before using IG Publisher to publish your implementation guides, you need to set up a local environment to stage your IGs for publication. This is a single workspace that will be used for all releases of all implementation guides published to your website.</p>
+
+<ol>
+  <li>
+    <p>Clone the HL7 <a href="https://github.com/HL7/fhir-ig-history-template">history</a>, <a href="https://github.com/HL7/fhir-web-templates">web templates</a>, and FHIR <a href="https://github.com/FHIR/ig-registry">IG registry</a> repositories. You’ll need to commit changes to the <code class="language-plaintext highlighter-rouge">ig-registry</code> repo, so you may need to fork the repo if you have insufficient privileges.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src
+<span class="nv">$ </span>git clone git@github.com:HL7/fhir-ig-history-template.git ig-history
+<span class="nv">$ </span>git clone git@github.com:HL7/fhir-web-templates.git fhir-web-templates
+<span class="nv">$ </span>git clone git@github.com:FHIR/ig-registry.git ig-registry
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create a publication directory.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src
+<span class="nv">$ </span><span class="nb">mkdir </span>publication
+</code></pre></div>    </div>
+
+    <p>Alternatively you may want to create a publication repository to keep a copy of your website.</p>
+  </li>
+  <li>
+    <p>Within the <code class="language-plaintext highlighter-rouge">publication</code> directory, set up the publication resources.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>publication
+<span class="nv">$ </span><span class="nb">mkdir </span>templates webroot
+<span class="nv">$ </span><span class="nb">cp</span> ../fhir-web-templates/<span class="k">*</span>template<span class="k">*</span> templates
+</code></pre></div>    </div>
+
+    <p>This creates a <code class="language-plaintext highlighter-rouge">webroot</code> directory, creates a <code class="language-plaintext highlighter-rouge">templates</code> directory, and populates it with the customizable portion of the history templates.</p>
+
+    <p>You may now delete the <code class="language-plaintext highlighter-rouge">fhir-web-templates</code> repo.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src
+<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> fhir-web-templates
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Edit the files in <code class="language-plaintext highlighter-rouge">publication/templates</code> to reflect the styling used across your site’s IGs. This styling will be applied to the IG history pages and other content generated by the publication process. (Styling for your IG itself is determined by the IG’s configured template.) Modify the templates to specify:</p>
+
+    <ul>
+      <li>The correct favicon and CSS style sheets</li>
+      <li>Organizational logos or text in the page header</li>
+      <li>The copyright statement to display</li>
+    </ul>
+
+    <p>Supporting files should be added to <code class="language-plaintext highlighter-rouge">webroot/assets-hist</code>.</p>
+  </li>
+  <li>
+    <p>In the <code class="language-plaintext highlighter-rouge">publication</code> directory, create the <a href="https://confluence.hl7.org/display/FHIR/Maintaining+a+FHIR+IG+Publication">publication configuration</a> file <code class="language-plaintext highlighter-rouge">webroot/publish-setup.json</code>, updating fields as appropriate for your site.</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="nl">"website"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"style"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fhir.layout"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/ig"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apache"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"org"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Organization"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"search-template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchform.template.html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"index-template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.template"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"feeds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"package-feed.xml"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"publication"</span><span class="p">:</span><span class="w"> </span><span class="s2">"publication-feed.xml"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"layout-rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"npm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"org.example.*"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/ig/{3}"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/{3}"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+   </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p>This <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-Documentationforpublish-setup.json">file</a> defines the structure of your publication site, and where certain files are found.</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">url</code> is the base url of the web site</li>
+      <li><code class="language-plaintext highlighter-rouge">server</code> is one of the supported websever types: <code class="language-plaintext highlighter-rouge">apache</code> (apache or nginx), <code class="language-plaintext highlighter-rouge">litespeed</code>, <code class="language-plaintext highlighter-rouge">asp-old</code>, <code class="language-plaintext highlighter-rouge">asp-new</code></li>
+      <li><code class="language-plaintext highlighter-rouge">org</code> is your organization name</li>
+      <li><code class="language-plaintext highlighter-rouge">layout-rules</code> specify how IGs are published under the site. You may specify entries for specific IGs, or patterns that your IGs follow:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">npm</code> is the package id, or pattern (with wildcards) of package ids, that this layout rules applies to. The package id is made up of period-separated components.</li>
+          <li><code class="language-plaintext highlighter-rouge">canonical</code> is the canonical URL of IGs following this layout rule. It is either fully specified, or describes how to create canonical URLs from the package id components. This example shows a canonical generated using the third component of the package id.</li>
+          <li><code class="language-plaintext highlighter-rouge">destination</code> is the location under the <code class="language-plaintext highlighter-rouge">webroot</code> directory to stage your IG before uploading. This usually agrees with the information in <code class="language-plaintext highlighter-rouge">canonical</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Create <code class="language-plaintext highlighter-rouge">webroot/publication-feed.xml</code>, updating fields as appropriate for your publication.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;rss</span> <span class="na">xmlns:dc=</span><span class="s">"http://purl.org/dc/elements/1.1/"</span>
+      <span class="na">xmlns:content=</span><span class="s">"http://purl.org/rss/1.0/modules/content/"</span> <span class="na">xmlns:fhir=</span><span class="s">"http://hl7.org/fhir/feed"</span>
+      <span class="na">xmlns:atom=</span><span class="s">"http://www.w3.org/2005/Atom"</span> <span class="na">version=</span><span class="s">"2.0"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;channel&gt;</span>
+      <span class="nt">&lt;title&gt;</span>Example Organization FHIR Implementation Guides<span class="nt">&lt;/title&gt;</span>
+      <span class="nt">&lt;description&gt;</span>FHIR Implementation Guides published by Example Organization<span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;link&gt;</span>http://example.org/ig<span class="nt">&lt;/link&gt;</span>
+      <span class="nt">&lt;generator&gt;</span>Example Organization<span class="nt">&lt;/generator&gt;</span>
+      <span class="nt">&lt;lastBuildDate&gt;</span>Thu, 23 Mar 2023 12:00:00 GMT<span class="nt">&lt;/lastBuildDate&gt;</span>
+      <span class="nt">&lt;atom:link</span> <span class="na">href=</span><span class="s">"http://example.org/ig/publication-feed.xml"</span> <span class="na">rel=</span><span class="s">"self"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;pubDate&gt;</span>Thu, 23 Mar 2023 12:00:00 GMT<span class="nt">&lt;/pubDate&gt;</span>
+      <span class="nt">&lt;language&gt;</span>en<span class="nt">&lt;/language&gt;</span>
+      <span class="nt">&lt;ttl&gt;</span>600<span class="nt">&lt;/ttl&gt;</span>
+      <span class="nt">&lt;item&gt;</span>
+      <span class="nt">&lt;/item&gt;</span>
+   <span class="nt">&lt;/channel&gt;</span>
+<span class="nt">&lt;/rss&gt;</span>
+</code></pre></div>    </div>
+
+    <p>This defines the RSS feed used by the FHIR registry to find all the versions of all the implementation guides published on your site.</p>
+  </li>
+  <li>
+    <p>Copy <code class="language-plaintext highlighter-rouge">webroot/publication-feed.xml</code> to <code class="language-plaintext highlighter-rouge">webroot/package-feed.xml</code>, and:</p>
+
+    <ul>
+      <li>Update file name in the <code class="language-plaintext highlighter-rouge">&lt;atom:link&gt;</code> element</li>
+      <li>Update the description and title as appropriate for “packages” rather than “guides”</li>
+    </ul>
+
+    <p>This file defines the RSS feed used by the FHIR registry to find the packages for the implementation guides published on your site.</p>
+  </li>
+  <li>
+    <p>Download the latest HL7 IG Publisher to a convenient location.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-L</span> https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar <span class="nt">-o</span> ~/src/publisher.jar
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>From the publication directory, generate <code class="language-plaintext highlighter-rouge">webroot/package-registry.json</code>:</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src/publisher
+<span class="nv">$ </span>java <span class="nt">-jar</span> ../publisher.jar <span class="nt">-generate-package-registry</span> webroot
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>In the <code class="language-plaintext highlighter-rouge">ig-registry</code> repo, create a branch for your changes.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src/ig-registry
+<span class="nv">$ </span>git checkout <span class="nt">-b</span> example-org-igs
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">package-feeds.xml</code>, so that the registry will know about your packages. Add your feed to the <code class="language-plaintext highlighter-rouge">feeds</code> array:</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"comment"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The order of the feeds does not matter, but the order of the package-restrictions does"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"feeds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="err">...</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Organization FHIR Implementation Guides"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/ig/package-feed.xml"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"errors"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin|example_org"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"package-restrictions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="err">...</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p>The <code class="language-plaintext highlighter-rouge">errors</code> element contains the contact email for this feed, replacing <code class="language-plaintext highlighter-rouge">@</code> and <code class="language-plaintext highlighter-rouge">.</code> with <code class="language-plaintext highlighter-rouge">|</code> and <code class="language-plaintext highlighter-rouge">_</code>.</p>
+  </li>
+</ol>
+
+<p>Your publication workspace is now prepared. If appropriate, you may want to commit the publication directory repository.</p>
+
+<p>To publish an actual IG, proceed to <a href="./publication.html">Using IG Publisher -go-publish</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://argentixinfo.com">Argentix Informatics, Inc.</a>.  Package ca.argentixinfo.howtopub#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Nov 9, 2024 11:46-0800">2024-11-09</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ElliotSilver/how-to-publish/issues">Propose a change</a>
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

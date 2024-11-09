@@ -1,0 +1,16 @@
+[
+  {
+    "id" : "ca.argentixinfo.howtopub",
+    "type" : "ImplementationGuide",
+    "url" : "http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub",
+    "version" : "1.0.0",
+    "name" : "HowToPubIG"
+  },
+  {
+    "id" : "MyPatient",
+    "type" : "StructureDefinition",
+    "url" : "http://argentixinfo.com/ig/howtopub/StructureDefinition/MyPatient",
+    "version" : "1.0.0",
+    "name" : "MyPatient"
+  }
+]

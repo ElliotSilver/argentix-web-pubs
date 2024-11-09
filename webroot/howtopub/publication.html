@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Using IG Publisher -go-publish - How to Publish a FHIR Implementation Guide v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">How to Publish a FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - release
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="setup.html">Setup</a>
+  </li>
+  <li>
+    <a href="publication.html">Publication</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="about.html">About</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Using IG Publisher -go-publish</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the How to Publish a FHIR Implementation Guide (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Using IG Publisher -go-publish</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#prepare-your-implementation-guide" id="markdown-toc-prepare-your-implementation-guide">Prepare your Implementation Guide</a></li>
+  <li><a href="#do-a-publication-run-and-upload" id="markdown-toc-do-a-publication-run-and-upload">Do a Publication Run and Upload</a></li>
+  <li><a href="#commit-changes" id="markdown-toc-commit-changes">Commit changes</a></li>
+  <li><a href="#directory-structure" id="markdown-toc-directory-structure">Directory structure</a></li>
+</ul>
+
+</div>
+<p>The steps below describe how to publish an implementation guide using IG Publisher. Perform these steps for each release of each IG you want to publish. You should have already <a href="./setup.html">set up</a> your publication environment, and will need to be able to upload content to your website.</p>
+
+<h3 id="prepare-your-implementation-guide">Prepare your Implementation Guide</h3>
+
+<ol>
+  <li>
+    <p>Clone your IG repository to your local system.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">cd</span> ~/src
+ <span class="nv">$ </span>git clone git@github.com:ExampleOrg/my-ig.git
+ <span class="nv">$ </span><span class="nb">cd </span>my-ig
+</code></pre></div>    </div>
+
+    <p>(If the repo is already on your system, ensure all changes have been committed.)</p>
+  </li>
+  <li>
+    <p>Create a release branch of your IG repo and switch to it</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nt">-b</span> v1.0.0
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Review your IG’s ImplementationGuide resource (or <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) and update as needed.</p>
+
+    <ul>
+      <li>IG canonical aligns with your main publication location (e.g. <code class="language-plaintext highlighter-rouge">http://example.org/ig/myig</code>)</li>
+      <li>IG <code class="language-plaintext highlighter-rouge">status</code> (see <a href="http://hl7.org/fhir/ValueSet/publication-status">Publication Status</a>), <code class="language-plaintext highlighter-rouge">releaseLabel</code> (see <a href="http://hl7.org/fhir/tools/CodeSystem/ig-parameters">IG Parameters</a>), <code class="language-plaintext highlighter-rouge">date</code> (if explicitly set), and <code class="language-plaintext highlighter-rouge">version</code> elements are all correct for your published IG.</li>
+      <li>Dependencies (including the template specified in <code class="language-plaintext highlighter-rouge">igi.ini</code>) are up to date and set to specific versions.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Ensure you are starting from a known state.</p>
+
+    <ul>
+      <li>Delete contents of your FHIR cache directory <code class="language-plaintext highlighter-rouge">~/.fhir</code>, except for <code class="language-plaintext highlighter-rouge">fhir-settings.json</code> if it exists</li>
+      <li>Delete <code class="language-plaintext highlighter-rouge">fsh-generated</code>, <code class="language-plaintext highlighter-rouge">input-cache</code>, <code class="language-plaintext highlighter-rouge">output</code>, <code class="language-plaintext highlighter-rouge">temp</code>, and <code class="language-plaintext highlighter-rouge">template</code> directories from the IG project</li>
+      <li>
+        <p>Use the most current releases of IG tooling:</p>
+
+        <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>./_updatePublisher.sh
+ <span class="nv">$ </span>npm update <span class="nt">-g</span> fsh-sushi
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Create (or update) <code class="language-plaintext highlighter-rouge">publication-request.json</code> in your IG root directory, filling it out appropriately for your IG:</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="nl">"package-id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"org.example.myig"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"path"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/ig/myig/1.0.0"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"mode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"milestone"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"release"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"sequence"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Releases"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"desc"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Initial release as presented at FHIR North."</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"first"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"title"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"How to Publish a FHIR Implementation Guide"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"ci-build"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://build.fhir.org/ig/ExampleOrg/myig"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"category"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Infrastructure"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"introduction"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"An instructional guide showing how to use the HL7 IG Publisher's -go-publish feature to publish an implementation guide to a website."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p>This file is used to populate the publication feeds. Several elements are only for the first publication of an IG. See <a href="https://confluence.hl7.org/display/FHIR/IG+Publication+Request+Documentation">IG Publication Request Documentation</a> for complete details, including some additional elements.</p>
+
+    <table class="table-striped">
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th style="text-align: center">First  Only </th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">package-id</code></td>
+          <td style="text-align: center"> </td>
+          <td>The IG package id, matching the value from <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> or your ImplementationGuide resource</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">version</code></td>
+          <td style="text-align: center"> </td>
+          <td>The IG version, matching the value from <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> or your ImplementationGuide resource</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">path</code></td>
+          <td style="text-align: center"> </td>
+          <td>The permanent full URL at which the IG will be available. This must be of the form <code class="language-plaintext highlighter-rouge">[canonical]/[label]</code>, where <code class="language-plaintext highlighter-rouge">[canonical]</code> is the canonical URL of your IG, and <code class="language-plaintext highlighter-rouge">[label]</code> is the version or another label for this release (e.g. “STU1”).</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">mode</code></td>
+          <td style="text-align: center"> </td>
+          <td>One of:<ul><li><code class=" highlighter-rouge language-plaintext">working</code> (publish at <code class=" highlighter-rouge language-plaintext">path</code>, but don't update which publication is "current");</li><li><code class=" highlighter-rouge language-plaintext">milestone</code> (publish at <code class=" highlighter-rouge language-plaintext">path</code> and at the canonical, making this the "current" release);</li><li><code class=" highlighter-rouge language-plaintext">technical-correction</code> (replace the content at <code class=" highlighter-rouge language-plaintext">path</code>; if the content at <code class=" highlighter-rouge language-plaintext">path</code> is the "current" release, replace the content at the canonical also)</ul></td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">status</code></td>
+          <td style="text-align: center"> </td>
+          <td>The IG release status, typically <code class="language-plaintext highlighter-rouge">release</code>, <code class="language-plaintext highlighter-rouge">trial-use</code>, <code class="language-plaintext highlighter-rouge">draft</code>, or <code class="language-plaintext highlighter-rouge">normative</code> (or <a href="https://confluence.hl7.org/display/FHIR/IG+Publication+Request+Documentation">other options</a>); often matches the IG <code class="language-plaintext highlighter-rouge">releaselabel</code>.</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">sequence</code></td>
+          <td style="text-align: center"> </td>
+          <td>The release sequence, e.g. “Release 1,” that this publication is part of; or, “Publication,” “Release,” or similar, if not using release sequences. This determines grouping on the history page.</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">desc</code><br /><code class="language-plaintext highlighter-rouge">descmd</code></td>
+          <td style="text-align: center"> </td>
+          <td>The description of the release shown on the IG history page, as plain text (desc), or as markdown (descmd). Markdown is read from the file specified using “@[filename.md]”.</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">changes</code></td>
+          <td style="text-align: center"> </td>
+          <td>An optional relative link to a “Change Log” page in the IG</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">first</code></td>
+          <td style="text-align: center"> </td>
+          <td>Set to <code class="language-plaintext highlighter-rouge">true</code> on first publication of this IG; <code class="language-plaintext highlighter-rouge">false</code> or omit otherwise</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">title</code></td>
+          <td style="text-align: center">✓</td>
+          <td>The human readable name of the IG</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">ci-build</code></td>
+          <td style="text-align: center">✓</td>
+          <td>The location of the continuous integration build of the IG; often under <a href="http://build.fhir.org/ig/"><code class="language-plaintext highlighter-rouge">http://build.fhir.org/ig/</code></a></td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">category</code></td>
+          <td style="text-align: center">✓</td>
+          <td>A category for the guide; see the categories on the <a href="http://fhir.org/guides/registry/">FHIR registry</a>.</td>
+        </tr>
+        <tr>
+          <td><code class="language-plaintext highlighter-rouge">introduction</code></td>
+          <td style="text-align: center">✓</td>
+          <td>A human readable description of the intent of the IG; shown on the IG history page.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Ensure you can do a clean build of the IG.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./_genonce.sh
+</code></pre></div>    </div>
+
+    <p>Check the build command-line output and <code class="language-plaintext highlighter-rouge">output/qa.html</code> for errors and warnings, and correct if needed.</p>
+  </li>
+</ol>
+
+<h3 id="do-a-publication-run-and-upload">Do a Publication Run and Upload</h3>
+
+<ol>
+  <li>
+    <p>If you haven’t already, create a branch of the <code class="language-plaintext highlighter-rouge">ig-registry</code> repo.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src/ig-registry
+<span class="nv">$ </span>git checkout <span class="nt">-b</span> example-org-igs
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Switch to the the <code class="language-plaintext highlighter-rouge">publication</code> directory. Ensure you have a current copy of the IG Publisher.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src/publication
+<span class="nv">$ </span>curl <span class="nt">-L</span> https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar <span class="nt">-o</span> ~/src/publisher.jar
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run the IG Publisher in “publish” mode:</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src/publication
+<span class="nv">$ </span>java <span class="nt">-jar</span> ../publisher.jar <span class="nt">-go-publish</span> <span class="se">\</span>
+   <span class="nt">-source</span>    /home/username/src/my-ig <span class="se">\</span>
+   <span class="nt">-web</span>       /home/username/src/publication/webroot <span class="se">\</span>
+   <span class="nt">-history</span>   /home/username/src/ig-history <span class="se">\</span>
+   <span class="nt">-registry</span>  /home/username/src/ig-registry/fhir-ig-list.json <span class="se">\</span>
+   <span class="nt">-temp</span>      /home/username/src/publication/temp <span class="se">\</span>
+   <span class="nt">-templates</span> /home/username/src/publication/templates
+</code></pre></div>    </div>
+
+    <p>Files or directories must either be under the <code class="language-plaintext highlighter-rouge">publication</code> directory or specified using an absolute path.</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">source</code> - the IG to publish</li>
+      <li><code class="language-plaintext highlighter-rouge">web</code> - the base staging directory to put the generated files into</li>
+      <li><code class="language-plaintext highlighter-rouge">history</code> - the source directory for the history templates</li>
+      <li><code class="language-plaintext highlighter-rouge">registry</code> - the IG registry list file to update with information about this publication</li>
+      <li><code class="language-plaintext highlighter-rouge">temp</code> - a temporary storage location</li>
+      <li><code class="language-plaintext highlighter-rouge">templates</code> - your customization files for the generated history, etc.</li>
+    </ul>
+
+    <p>Running <code class="language-plaintext highlighter-rouge">-go-publish</code> may build your IG multiple times as part of the process.</p>
+  </li>
+  <li>
+    <p>Run the Jekyll web server and review the generated IG.</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jekyll server <span class="nt">-s</span> webroot
+</code></pre></div>    </div>
+
+    <p>The IG is accessible at <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>.</p>
+  </li>
+  <li>
+    <p>Upload the contents of the <code class="language-plaintext highlighter-rouge">webroot</code> directory to your website (<a href="http://example.org/ig">http://example.org/ig</a>), and review the publication.</p>
+  </li>
+</ol>
+
+<p>You have now published your IG to your website.</p>
+
+<h3 id="commit-changes">Commit changes</h3>
+
+<p>Once you are confident that the website is updated correctly, commit your changes.</p>
+
+<ol>
+  <li>
+    <p>The publication process updates the list of publications known to the general FHIR tooling. In the <code class="language-plaintext highlighter-rouge">ig-registry</code> repo:</p>
+
+    <ol>
+      <li>
+        <p>Find the entry for your IG in <code class="language-plaintext highlighter-rouge">fhir-ig-list.json</code>, and update the missing information (shown as <code class="language-plaintext highlighter-rouge">"??"</code>). Fill in <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">authority</code> (your organization, or omit for personal sites), and <code class="language-plaintext highlighter-rouge">country</code> (two letter country codes).</p>
+      </li>
+      <li>
+        <p>Commit the changes, push the changes upstream, and make a pull request to merge the changes back to the <code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code> repo. Once these changes are accepted, FHIR ecosystem tooling will be aware of your IG publication.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Typically, you’ll now want to commit two versions of your implementation guide to your repo.</p>
+
+    <ol>
+      <li>
+        <p>Commit the as-published version of your IG, and tag it. This will enable you to come back to this version if you need to republish, or issue an update.</p>
+      </li>
+      <li>
+        <p>Commit a version of your IG ready for the next round of development, and commit. To update your IG for further development,</p>
+
+        <ul>
+          <li>In your ImplementationGuide resource (or <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>), update the <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">releaseLabel</code>, and <code class="language-plaintext highlighter-rouge">version</code> elements as appropriate for the CI build; and revert dependencies to use the <code class="language-plaintext highlighter-rouge">current</code> version, if desired (also, the template version in <code class="language-plaintext highlighter-rouge">ig.ini</code>).</li>
+          <li>Remove first-time elements from <code class="language-plaintext highlighter-rouge">publication-request.json</code>, and update other elements in preparation for the next release.</li>
+          <li>Commit the changes to your implementation guide repo.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>If you are storing the publication website in a repository, you may wish to commit the contents of the <code class="language-plaintext highlighter-rouge">publication</code> directory.</p>
+  </li>
+</ol>
+
+<h3 id="directory-structure">Directory structure</h3>
+
+<p>Assuming you were publishing your IG with a release label of “1.0.0” as the current publication, then, at the end of this process, you should have a directory structure like:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>📁 .
+└─ 📁 myig (or your IG)
+   └─ ...
+└─ 📁 fhir-web-templates (can be deleted)
+   └─ ...
+└─ 📁 ig-history
+   └─ ...
+└─ 📁 ig-registry
+   └─ ...
+└─ 📁 publication
+   └─ 📁 webroot
+      └─ package-feed.xml
+      └─ package-registry.json
+      └─ publication-feed.xml
+      └─ publish-setup.json
+      └─ 📁 myig
+         └─ (contents of the published "current" IG)
+         └─ 📁 1.0.0
+            └─ (contents of the published "1.0.0" IG)
+   └─ 📁 temp
+      └─ ...
+   └─ 📁 templates
+      └─ header.template
+      └─ index.template
+      └─ postamble.template
+      └─ preamble.template
+      └─ searchform.template.html
+</code></pre></div></div>
+
+<p>The contents of the <code class="language-plaintext highlighter-rouge">myig</code> and <code class="language-plaintext highlighter-rouge">1.0.0</code> directories will be (almost) the same.</p>
+
+<p>To see the impact of additional publications, you can update the version of your IG in the ImplementationGuide resource (or <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>), and in <code class="language-plaintext highlighter-rouge">publication-request.json</code> (and the other changes from the first section of this page), and run the <code class="language-plaintext highlighter-rouge">-go-publish</code> process again.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://argentixinfo.com">Argentix Informatics, Inc.</a>.  Package ca.argentixinfo.howtopub#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Nov 9, 2024 11:47-0800">2024-11-09</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ElliotSilver/how-to-publish/issues">Propose a change</a>
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

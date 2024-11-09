@@ -1,0 +1,15 @@
+HowToPubIG : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: 1.7.1
+Generated Sat Nov 09 11:47:00 PST 2024. FHIR version 4.0.1 for ca.argentixinfo.howtopub#1.0.0 (canonical = http://argentixinfo.com/ig/howtopub)
+ Build Errors : 0 / 0 / 0
+ /Users/elliot/src/temp/ca.argentixinfo.howtopub#1.0.0/fsh-generated/resources/ImplementationGuide-ca.argentixinfo.howtopub : 0 / 0 / 1
+ /Users/elliot/src/temp/ca.argentixinfo.howtopub#1.0.0/fsh-generated/resources/Patient-PatientExample : 0 / 0 / 1
+ /Users/elliot/src/temp/ca.argentixinfo.howtopub#1.0.0/fsh-generated/resources/StructureDefinition-MyPatient : 0 / 0 / 1
+</table>
+== n/a ==
+== fsh-generated/resources/ImplementationGuide-ca.argentixinfo.howtopub.json ==
+== fsh-generated/resources/Patient-PatientExample.json ==
+== fsh-generated/resources/StructureDefinition-MyPatient.json ==
