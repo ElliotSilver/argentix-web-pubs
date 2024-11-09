@@ -3,3 +3,12 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets-hist/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="assets-hist/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets-hist/ico/favicon.png"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRT1YNT4PQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);
+  }
+    gtag('js', new Date());
+    gtag('config', 'G-MRT1YNT4PQ');
+  </script>
