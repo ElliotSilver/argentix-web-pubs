@@ -1,0 +1,21 @@
+{
+   "website": {
+      "style": "fhir.layout",
+      "url": "http://argentixinfo.com/ig",
+      "server": "apache",
+      "org": "Argentix Informatics, Inc.",
+      "search-template": "searchform.template.html",
+      "index-template": "index.template"
+   },
+   "feeds": {
+      "package": "package-feed.xml",
+      "publication": "publication-feed.xml"
+   },
+   "layout-rules": [
+      {
+         "npm": "ca.argentixinfo.*",
+         "canonical": "http://argentixinfo.com/ig/{3}",
+         "destination": "/{3}"
+      }
+   ]
+}
