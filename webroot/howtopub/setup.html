@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Setting up the Publication Environment - How to Publish a FHIR Implementation Guide v1.0.0</title>
+    <title>Setting up the Publication Environment - How to Publish a FHIR Implementation Guide v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -34,31 +35,24 @@
     <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRT1YNT4PQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-MRT1YNT4PQ');
-    </script>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">How to Publish a FHIR Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0 - release
 
 
 
@@ -108,6 +102,9 @@
     <a href="about.html">About</a>
   </li>
   <li>
+    <a href="changes.html">Change History</a>
+  </li>
+  <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
@@ -142,7 +139,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the How to Publish a FHIR Implementation Guide (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the How to Publish a FHIR Implementation Guide (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Setting up the Publication Environment</h2>
   
 
@@ -165,7 +162,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ol>
   <li>
-    <p>Clone the HL7 <a href="https://github.com/HL7/fhir-ig-history-template">history</a>, <a href="https://github.com/HL7/fhir-web-templates">web templates</a>, and FHIR <a href="https://github.com/FHIR/ig-registry">IG registry</a> repositories. You’ll need to commit changes to the <code class="language-plaintext highlighter-rouge">ig-registry</code> repo, so you may need to fork the repo if you have insufficient privileges.</p>
+    <p>Clone the HL7 <a href="https://github.com/HL7/fhir-ig-history-template">history</a>, <a href="https://github.com/HL7/fhir-web-templates">web templates</a>, and FHIR <a href="https://github.com/FHIR/ig-registry">IG registry</a> repositories. You'll need to commit changes to the <code class="language-plaintext highlighter-rouge">ig-registry</code> repo, so you may need to fork the repo if you have insufficient privileges.</p>
 
     <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/src
 <span class="nv">$ </span>git clone git@github.com:HL7/fhir-ig-history-template.git ig-history
@@ -199,7 +196,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Edit the files in <code class="language-plaintext highlighter-rouge">publication/templates</code> to reflect the styling used across your site’s IGs. This styling will be applied to the IG history pages and other content generated by the publication process. (Styling for your IG itself is determined by the IG’s configured template.) Modify the templates to specify:</p>
+    <p>Edit the files in <code class="language-plaintext highlighter-rouge">publication/templates</code> to reflect the styling used across your site's IGs. This styling will be applied to the IG history pages and other content generated by the publication process. (Styling for your IG itself is determined by the IG's configured template.) Modify the templates to specify:</p>
 
     <ul>
       <li>The correct favicon and CSS style sheets</li>
@@ -219,7 +216,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </span><span class="nl">"server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"apache"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"org"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Organization"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"search-template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchform.template.html"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"index-template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.template"</span><span class="w">
+      </span><span class="nl">"index-template"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.template"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"clone-xml-json"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
    </span><span class="p">},</span><span class="w">
    </span><span class="nl">"feeds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"package-feed.xml"</span><span class="p">,</span><span class="w">
@@ -239,8 +237,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
     <ul>
       <li><code class="language-plaintext highlighter-rouge">url</code> is the base url of the web site</li>
-      <li><code class="language-plaintext highlighter-rouge">server</code> is one of the supported websever types: <code class="language-plaintext highlighter-rouge">apache</code> (apache or nginx), <code class="language-plaintext highlighter-rouge">litespeed</code>, <code class="language-plaintext highlighter-rouge">asp-old</code>, <code class="language-plaintext highlighter-rouge">asp-new</code></li>
+      <li><code class="language-plaintext highlighter-rouge">server</code> is one of the supported webserver types: <code class="language-plaintext highlighter-rouge">apache</code> (apache or nginx), <code class="language-plaintext highlighter-rouge">cloud</code> (S3, etc. or GitHub pages) <code class="language-plaintext highlighter-rouge">asp-old</code>, <code class="language-plaintext highlighter-rouge">asp-new</code>. This is used to determine how to construct redirects.</li>
       <li><code class="language-plaintext highlighter-rouge">org</code> is your organization name</li>
+      <li><code class="language-plaintext highlighter-rouge">clone-xml-json</code> determines whether the redirects to handle Accept headers of, for example, <code class="language-plaintext highlighter-rouge">application/json</code>, <code class="language-plaintext highlighter-rouge">application/fhir+json</code> and <code class="language-plaintext highlighter-rouge">application/json+fhir</code> require distinct copies of the target file (when true) or whether all of those content types can be supported with a single file (when false).</li>
       <li><code class="language-plaintext highlighter-rouge">layout-rules</code> specify how IGs are published under the site. You may specify entries for specific IGs, or patterns that your IGs follow:
         <ul>
           <li><code class="language-plaintext highlighter-rouge">npm</code> is the package id, or pattern (with wildcards) of package ids, that this layout rules applies to. The package id is made up of period-separated components.</li>
@@ -280,7 +279,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
     <ul>
       <li>Update file name in the <code class="language-plaintext highlighter-rouge">&lt;atom:link&gt;</code> element</li>
-      <li>Update the description and title as appropriate for “packages” rather than “guides”</li>
+      <li>Update the description and title as appropriate for "packages" rather than "guides"</li>
     </ul>
 
     <p>This file defines the RSS feed used by the FHIR registry to find the packages for the implementation guides published on your site.</p>
@@ -351,7 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://argentixinfo.com">Argentix Informatics, Inc.</a>.  Package ca.argentixinfo.howtopub#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Nov 9, 2024 11:47-0800">2024-11-09</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://argentixinfo.com">Argentix Informatics, Inc.</a>.  Package ca.argentixinfo.howtopub#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 20, 2025 21:19-0800">2025-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -368,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -379,7 +378,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

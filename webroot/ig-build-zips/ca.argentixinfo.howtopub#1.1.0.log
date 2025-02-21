@@ -1,0 +1,289 @@
+FHIR IG Publisher Version 1.8.13 (Git# e89cdedc7f58). Built 2025-02-17T04:21:57.376Z (4 days old)
+Detected Java version: 17.0.1 from /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home on x86_64 (64bit). 2048MB available
+dir = /Users/elliot/src/publication, path = /Users/elliot/.nvm/versions/node/v20.17.0/bin:/Users/elliot/.rbenv/shims:/Users/elliot/.rbenv/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Users/elliot/.nvm/versions/node/v20.17.0/bin:/Users/elliot/.rbenv/shims:/Users/elliot/.rbenv/bin:/Users/elliot/.dotnet/tools:/Users/elliot/.dotnet/tools
+Parameters: -go-publish -source /Users/elliot/src/how-to-publish -web /Users/elliot/src/publication/webroot -history /Users/elliot/src/ig-history -registry /Users/elliot/src/ig-registry/fhir-ig-list.json -temp /Users/elliot/src/publication/temp -templates /Users/elliot/src/publication/templates
+---------------
+Publication Run: publish /Users/elliot/src/how-to-publish to /Users/elliot/src/publication/webroot
+Relative directory for IG is '/howtopub'
+===== Web Publication Run Details ===============================
+ Source IG: ca.argentixinfo.howtopub#1.1.0 : http://argentixinfo.com/ig/howtopub (R4) from /Users/elliot/src/how-to-publish
+All checks passed. Do the publication build from /Users/elliot/src/how-to-publish and publish to /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub
+Prepare Build space in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0
+Build IG at /Users/elliot/src/how-to-publish: final copy suitable for publication (in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0)
+FHIR IG Publisher Version 1.8.13 (Git# e89cdedc7f58). Built 2025-02-17T04:21:57.376Z (4 days old)   
+Detected Java version: 17.0.1 from /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home on Mac OS X/x86_64 (64bit). 2048MB available
+dir = /Users/elliot/src/publication, path = /Users/elliot/.nvm/versions/node/v20.17.0/bin:/Users/elliot/.rbenv/shims:/Users/elliot/.rbenv/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Users/elliot/.nvm/versions/node/v20.17.0/bin:/Users/elliot/.rbenv/shims:/Users/elliot/.rbenv/bin:/Users/elliot/.dotnet/tools:/Users/elliot/.dotnet/tools
+Parameters: -ig /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0 -resetTx -publish http://argentixinfo.com/ig/howtopub/1.1.0 -no-exit
+Start Clock @ Thursday, February 20, 2025 at 9:17:09 p.m. Pacific Standard Time (2025-02-20T21:17:09-08:00)
+                                                                                                    
+Build FHIR IG from /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0                 (00:00.058 / 00:00.059, 64Mb)
+Build Formal Publication package, intended for http://argentixinfo.com/ig/howtopub/1.1.0             (00:00.005 / 00:00.064, 64Mb)
+API keys loaded from /Users/elliot/.fhir/fhir-settings.json                                          (00:00.002 / 00:00.067, 64Mb)
+Package Cache: /Users/elliot/.fhir/packages                                                          (00:00.010 / 00:00.078, 64Mb)
+Run Sushi on /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0                       (00:00.007 / 00:00.085, 64Mb)
+Sushi: info  Running SUSHI v3.14.0 (implements FHIR Shorthand specification v3.0.0)                  (00:02.042 / 00:02.128, 65Mb)
+Sushi: info  Arguments:                                                                              (00:00.003 / 00:02.131, 65Mb)
+Sushi: info    --require-latest                                                                      (00:00.002 / 00:02.134, 65Mb)
+Sushi: info    --out /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0               (00:00.002 / 00:02.137, 65Mb)
+Sushi: info    /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0                     (00:00.002 / 00:02.139, 65Mb)
+Sushi: info  Using configuration file: /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/sushi-config.yaml (00:01.627 / 00:03.767, 65Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.116 / 00:03.884, 65Mb)
+Sushi: info  Preprocessed 1 documents with 0 aliases.                                                (00:00.038 / 00:03.922, 65Mb)
+Sushi: info  Imported 1 definitions and 1 instances.                                                 (00:00.004 / 00:03.926, 65Mb)
+Sushi: info  Loaded virtual package sushi-r5forR4#1.0.0 with 7 resources                             (00:00.130 / 00:04.056, 65Mb)
+Sushi: info  Resolved hl7.fhir.uv.tools.r4#latest to concrete version 0.3.0                          (00:01.539 / 00:05.596, 65Mb)
+Sushi: info  Loaded hl7.fhir.uv.tools.r4#0.3.0 with 75 resources                                     (00:00.103 / 00:05.700, 65Mb)
+Sushi: info  Resolved hl7.terminology.r4#latest to concrete version 6.2.0                            (00:00.175 / 00:05.876, 65Mb)
+Sushi: info  Loaded hl7.terminology.r4#6.2.0 with 4323 resources                                     (00:04.034 / 00:09.911, 65Mb)
+Sushi: info  Resolved hl7.fhir.uv.extensions.r4#latest to concrete version 5.2.0                     (00:00.174 / 00:10.085, 65Mb)
+Sushi: info  Loaded hl7.fhir.uv.extensions.r4#5.2.0 with 759 resources                               (00:00.679 / 00:10.765, 65Mb)
+Sushi: info  Loaded hl7.fhir.r4.core#4.0.1 with 4581 resources                                       (00:03.888 / 00:14.653, 65Mb)
+Sushi: info  Loaded virtual package sushi-local#LOCAL with 0 resources                               (00:00.013 / 00:14.667, 65Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.023 / 00:14.690, 65Mb)
+Sushi: info  Converted 1 FHIR StructureDefinitions.                                                  (00:00.040 / 00:14.731, 65Mb)
+Sushi: info  Converted 1 FHIR instances.                                                             (00:00.231 / 00:14.962, 65Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.002 / 00:14.964, 65Mb)
+Sushi: info  Exported 2 FHIR resources as JSON.                                                      (00:00.009 / 00:14.974, 65Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.002 / 00:14.977, 65Mb)
+Sushi: info  Generated ImplementationGuide-ca.argentixinfo.howtopub.json                             (00:00.012 / 00:14.989, 65Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.002 / 00:14.992, 65Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.002 / 00:14.994, 65Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:14.997, 65Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.002 / 00:14.999, 65Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.004 / 00:15.004, 65Mb)
+Sushi: | |       1       |      0       |      0       |       0       | |                           (00:00.003 / 00:15.007, 65Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:15.009, 65Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:15.012, 65Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.002 / 00:15.015, 65Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.001 / 00:15.017, 65Mb)
+Sushi: | |         0          |         0         |         1          | |                           (00:00.002 / 00:15.019, 65Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:15.021, 65Mb)
+Sushi: |                                                                 |                           (00:00.002 / 00:15.023, 65Mb)
+Sushi: ===================================================================                           (00:00.001 / 00:15.025, 65Mb)
+Sushi: | FSHing for compliments? Super job!     0 Errors      0 Warnings |                           (00:00.002 / 00:15.027, 65Mb)
+Sushi: ===================================================================                           (00:00.001 / 00:15.029, 65Mb)
+Unable to load IG as an r5 IG - try R4 (property code is a class com.google.gson.JsonPrimitive looking for an object) (00:01.030 / 00:16.060, 21Mb)
+Load Template from fhir.base.template#current                                                        (00:00.828 / 00:16.889, 41Mb)
+Root directory: /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0                    (00:11.199 / 00:28.088, 87Mb)
+Terminology Cache is at /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/input-cache/txcache. Clearing now (00:02.050 / 00:30.139, 88Mb)
+Core Package hl7.fhir.r4.core#4.0.1
+Running Terminology Log: /var/folders/wy/qyscnv3n0v76wp03lr9nvbsw0000gn/T/ohfu-fhir-ig-4038405109165263257.log
+Connect to Terminology Server at http://tx.fhir.org                                                  (00:06.299 / 00:36.439, 328Mb)
+Load Package hl7.fhir.pubpack#0.2.1
+Load Package hl7.fhir.xver-extensions#0.1.0
+Load Package hl7.terminology.r4#6.2.0
+Load Package hl7.fhir.uv.extensions.r4#5.2.0
+Load Package hl7.fhir.uv.tools.r4#0.3.0
+Load R5 Specials
+Initialization complete                                                                              (00:12.857 / 00:49.296, 388Mb)
+Load Content                                                                                         (00:00.007 / 00:49.303, 388Mb)
+Using en-US as the default narrative language. (no language information in Implementation Guide)     (00:00.087 / 00:49.391, 392Mb)
+Process Loaded Resources                                                                             (00:00.202 / 00:49.594, 395Mb)
+Generating Snapshots                                                                                 (00:00.116 / 00:49.710, 400Mb)
+loadPrePages from FetchedFile[/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/fsh-generated/includes] as /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/fsh-generated/includes
+loadPrePages from FetchedFile[/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/input/data] as /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/input/data
+loadPrePages from FetchedFile[/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/input/pagecontent] as /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/input/pagecontent
+Fetch http://argentixinfo.com/ig/howtopub/package-list.json for version check                        (00:00.251 / 00:49.961, 424Mb)
+Processing Conformance Resources                                                                     (00:01.837 / 00:51.799, 427Mb)
+Checking Language                                                                                    (00:00.002 / 00:51.802, 427Mb)
+Load Dependency Info                                                                                 (00:00.002 / 00:51.805, 427Mb)
+Load Info                                                                                            (00:00.003 / 00:51.808, 427Mb)
+Load Paths                                                                                           (00:00.002 / 00:51.812, 428Mb)
+Check R4 / R4B                                                                                       (00:00.003 / 00:51.815, 428Mb)
+Assign Comparison Ids                                                                                (00:00.009 / 00:51.824, 429Mb)
+Propagating status                                                                                   (00:00.003 / 00:51.827, 429Mb)
+Generating Narratives                                                                                (00:00.003 / 00:51.830, 429Mb)
+Validating Conformance Resources                                                                     (00:01.466 / 00:53.297, 457Mb)
+Check profiles & code systems                                                                        (00:03.806 / 00:57.103, 512Mb)
+Check realm rules                                                                                    (00:00.002 / 00:57.106, 512Mb)
+Previous Version Comparison                                                                          (00:00.001 / 00:57.108, 512Mb)
+Validating Resources                                                                                 (00:10.501 / 01:07.609, 567Mb)
+Processing Provenance Records                                                                        (00:00.007 / 01:07.616, 567Mb)
+Generating Outputs in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/output       (00:00.004 / 01:07.621, 567Mb)
+Warning @ Git URL is not a valid URl. Source: git remote origin url
+Generate Native Outputs                                                                              (00:00.122 / 01:07.743, 572Mb)
+Run Template                                                                                         (00:01.035 / 01:08.779, 604Mb)
+Generate HTML Outputs                                                                                (00:02.435 / 01:11.214, 638Mb)
+Generate Spreadsheets                                                                                (00:01.623 / 01:12.838, 786Mb)
+Generate Summaries                                                                                   (00:05.897 / 01:18.736, 592Mb)
+Generating Summary Outputs                                                                           (00:00.003 / 01:18.739, 592Mb)
+DB Cumulative Time invested: 00:00:00.62
+Sending Usage Stats to Server                                                                        (00:09.585 / 01:28.324, 615Mb)
+## Memory (MB): Use = 616, Free = 422, Total = 1039, Max = 2048                                      (00:00.014 / 01:28.339, 616Mb)
+Reclaiming memory...                                                                                 (00:00.009 / 01:28.348, 616Mb)
+## Memory (MB): Use = 464, Free = 574, Total = 1039, Max = 2048                                      (00:00.339 / 01:28.688, 465Mb)
+Run jekyll: jekyll build --destination "/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/output" (in folder /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/temp/pages) (00:00.005 / 01:28.693, 465Mb)
+Troubleshooting Note: usual cases for Jekyll to fail are:                                            (00:00.004 / 01:28.698, 465Mb)
+* A failure to produce a fragment that is already logged in the output above                         (00:00.002 / 01:28.701, 465Mb)
+* A reference to a manually edited file that hasn't been provided                                    (00:00.003 / 01:28.704, 465Mb)
+Jekyll: Source: /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/temp/pages         (00:01.923 / 01:30.628, 468Mb)
+Jekyll: Generating...                                                                                (00:00.003 / 01:30.631, 468Mb)
+Jekyll: done in 2.269 seconds.                                                                       (00:02.265 / 01:32.897, 468Mb)
+
+Installing ca.argentixinfo.howtopub#1.1.0
+Checking Output HTML                                                                                 (00:01.252 / 01:34.150, 580Mb)
+found 570 files                                                                                      (00:00.006 / 01:34.156, 580Mb)
+........................................
+........................................
+  ... 570 html files, 0 pages invalid xhtml (0%)                                                     (00:01.436 / 01:35.593, 684Mb)
+  ... 8918 links, 0 broken links (0%)                                                                (00:00.002 / 01:35.596, 684Mb)
+Generate fragment-usage-analysis.csv                                                                 (00:00.003 / 01:35.599, 684Mb)
+Build final .zip                                                                                     (00:00.014 / 01:35.614, 685Mb)
+Final .zip built                                                                                     (00:01.325 / 01:36.940, 695Mb)
+Built. Times: loading: 00:02.491, generate: 00:48.533, narrative generation: 00:01.463, realm-rules: 00:00.001, previous-version: 00:10.476, jekyll: 00:04.217, validation: 00:03.808 (#3), template: 00:02.448 (#3) (00:03.408 / 01:40.348, 511Mb)
+Generating QA                                                                                        (00:00.003 / 01:40.352, 511Mb)
+Validation output in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0/output/qa.html
+Errors: 0, Warnings: 0, Info: 1, Broken Links: 0 (00:00.107 / 01:40.460, 531Mb)
+Finished. Max Memory Used = 786Mb. Log file saved in /var/folders/wy/qyscnv3n0v76wp03lr9nvbsw0000gn/T/fhir-ig-publisher-tmp.log (00:00.003 / 01:40.464, 531Mb)
+Prepare Build space in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone
+Build IG at /Users/elliot/src/how-to-publish: final copy suitable for publication (in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone) (milestone build)
+FHIR IG Publisher Version 1.8.13 (Git# e89cdedc7f58). Built 2025-02-17T04:21:57.376Z (4 days old)   
+Detected Java version: 17.0.1 from /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home on Mac OS X/x86_64 (64bit). 2048MB available
+dir = /Users/elliot/src/publication, path = /Users/elliot/.nvm/versions/node/v20.17.0/bin:/Users/elliot/.rbenv/shims:/Users/elliot/.rbenv/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Users/elliot/.nvm/versions/node/v20.17.0/bin:/Users/elliot/.rbenv/shims:/Users/elliot/.rbenv/bin:/Users/elliot/.dotnet/tools:/Users/elliot/.dotnet/tools
+Parameters: -ig /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone -publish http://argentixinfo.com/ig/howtopub/1.1.0 -milestone -no-exit
+Start Clock @ Thursday, February 20, 2025 at 9:19:09 p.m. Pacific Standard Time (2025-02-20T21:19:09-08:00)
+                                                                                                    
+Build FHIR IG from /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone       (00:00.008 / 00:00.009, 593Mb)
+Build Formal Publication package, intended for http://argentixinfo.com/ig/howtopub/1.1.0             (00:00.003 / 00:00.012, 593Mb)
+API keys loaded from /Users/elliot/.fhir/fhir-settings.json                                          (00:00.003 / 00:00.015, 593Mb)
+Package Cache: /Users/elliot/.fhir/packages                                                          (00:00.004 / 00:00.019, 593Mb)
+Run Sushi on /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone             (00:00.002 / 00:00.022, 593Mb)
+Sushi: info  Running SUSHI v3.14.0 (implements FHIR Shorthand specification v3.0.0)                  (00:01.767 / 00:01.790, 594Mb)
+Sushi: info  Arguments:                                                                              (00:00.002 / 00:01.792, 594Mb)
+Sushi: info    --require-latest                                                                      (00:00.003 / 00:01.796, 594Mb)
+Sushi: info    --out /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone     (00:00.004 / 00:01.800, 594Mb)
+Sushi: info    /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone           (00:00.003 / 00:01.804, 594Mb)
+Sushi: info  Using configuration file: /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/sushi-config.yaml (00:01.108 / 00:02.913, 594Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.156 / 00:03.069, 594Mb)
+Sushi: info  Preprocessed 1 documents with 0 aliases.                                                (00:00.051 / 00:03.121, 594Mb)
+Sushi: info  Imported 1 definitions and 1 instances.                                                 (00:00.007 / 00:03.127, 594Mb)
+Sushi: info  Loaded virtual package sushi-r5forR4#1.0.0 with 7 resources                             (00:00.152 / 00:03.280, 594Mb)
+Sushi: info  Resolved hl7.fhir.uv.tools.r4#latest to concrete version 0.3.0                          (00:00.962 / 00:04.242, 594Mb)
+Sushi: info  Loaded hl7.fhir.uv.tools.r4#0.3.0 with 75 resources                                     (00:00.092 / 00:04.334, 594Mb)
+Sushi: info  Resolved hl7.terminology.r4#latest to concrete version 6.2.0                            (00:00.177 / 00:04.512, 594Mb)
+Sushi: info  Loaded hl7.terminology.r4#6.2.0 with 4323 resources                                     (00:03.441 / 00:07.953, 594Mb)
+Sushi: info  Resolved hl7.fhir.uv.extensions.r4#latest to concrete version 5.2.0                     (00:00.175 / 00:08.129, 594Mb)
+Sushi: info  Loaded hl7.fhir.uv.extensions.r4#5.2.0 with 759 resources                               (00:00.684 / 00:08.814, 594Mb)
+Sushi: info  Loaded hl7.fhir.r4.core#4.0.1 with 4581 resources                                       (00:03.547 / 00:12.361, 594Mb)
+Sushi: info  Loaded virtual package sushi-local#LOCAL with 0 resources                               (00:00.019 / 00:12.381, 594Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.020 / 00:12.402, 594Mb)
+Sushi: info  Converted 1 FHIR StructureDefinitions.                                                  (00:00.040 / 00:12.442, 594Mb)
+Sushi: info  Converted 1 FHIR instances.                                                             (00:00.059 / 00:12.501, 594Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.001 / 00:12.503, 594Mb)
+Sushi: info  Exported 2 FHIR resources as JSON.                                                      (00:00.008 / 00:12.511, 594Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.001 / 00:12.513, 594Mb)
+Sushi: info  Generated ImplementationGuide-ca.argentixinfo.howtopub.json                             (00:00.013 / 00:12.527, 594Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.003 / 00:12.530, 594Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.003 / 00:12.533, 594Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.003 / 00:12.536, 594Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.002 / 00:12.539, 594Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.003 / 00:12.543, 594Mb)
+Sushi: | |       1       |      0       |      0       |       0       | |                           (00:00.002 / 00:12.545, 594Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:12.547, 594Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:12.549, 594Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.002 / 00:12.552, 594Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.001 / 00:12.554, 594Mb)
+Sushi: | |         0          |         0         |         1          | |                           (00:00.001 / 00:12.556, 594Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:12.559, 594Mb)
+Sushi: |                                                                 |                           (00:00.002 / 00:12.561, 594Mb)
+Sushi: ===================================================================                           (00:00.002 / 00:12.563, 594Mb)
+Sushi: | You earned a PhD in Ichthyology!       0 Errors      0 Warnings |                           (00:00.003 / 00:12.567, 594Mb)
+Sushi: ===================================================================                           (00:00.001 / 00:12.569, 594Mb)
+Unable to load IG as an r5 IG - try R4 (property code is a class com.google.gson.JsonPrimitive looking for an object) (00:00.026 / 00:12.596, 594Mb)
+Load Template from fhir.base.template#current                                                        (00:00.060 / 00:12.657, 595Mb)
+Root directory: /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone          (00:08.232 / 00:20.889, 534Mb)
+Terminology Cache is at /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/input-cache/txcache. 6 files in cache (00:01.821 / 00:22.711, 556Mb)
+Core Package hl7.fhir.r4.core#4.0.1
+Running Terminology Log: /var/folders/wy/qyscnv3n0v76wp03lr9nvbsw0000gn/T/ohfu-fhir-ig-14526626768653365040.log
+Connect to Terminology Server at http://tx.fhir.org                                                  (00:03.180 / 00:25.891, 749Mb)
+Load Package hl7.fhir.pubpack#0.2.1
+Load Package hl7.fhir.xver-extensions#0.1.0
+Load Package hl7.terminology.r4#6.2.0
+Load Package hl7.fhir.uv.extensions.r4#5.2.0
+Load Package hl7.fhir.uv.tools.r4#0.3.0
+Load R5 Specials
+Initialization complete                                                                              (00:09.098 / 00:34.990, 870Mb)
+Load Content                                                                                         (00:00.002 / 00:34.993, 870Mb)
+Using en-US as the default narrative language. (no language information in Implementation Guide)     (00:00.033 / 00:35.026, 874Mb)
+Process Loaded Resources                                                                             (00:00.079 / 00:35.106, 876Mb)
+Generating Snapshots                                                                                 (00:00.035 / 00:35.141, 880Mb)
+loadPrePages from FetchedFile[/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/fsh-generated/includes] as /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/fsh-generated/includes
+loadPrePages from FetchedFile[/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/input/data] as /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/input/data
+loadPrePages from FetchedFile[/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/input/pagecontent] as /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/input/pagecontent
+Fetch http://argentixinfo.com/ig/howtopub/package-list.json for version check                        (00:00.097 / 00:35.239, 902Mb)
+Processing Conformance Resources                                                                     (00:00.679 / 00:35.918, 905Mb)
+Checking Language                                                                                    (00:00.003 / 00:35.922, 905Mb)
+Load Dependency Info                                                                                 (00:00.003 / 00:35.925, 905Mb)
+Load Info                                                                                            (00:00.004 / 00:35.930, 905Mb)
+Load Paths                                                                                           (00:00.003 / 00:35.933, 906Mb)
+Check R4 / R4B                                                                                       (00:00.002 / 00:35.936, 906Mb)
+Assign Comparison Ids                                                                                (00:00.006 / 00:35.943, 906Mb)
+Propagating status                                                                                   (00:00.001 / 00:35.944, 906Mb)
+Generating Narratives                                                                                (00:00.001 / 00:35.946, 906Mb)
+Validating Conformance Resources                                                                     (00:00.435 / 00:36.381, 925Mb)
+Check profiles & code systems                                                                        (00:01.879 / 00:38.261, 806Mb)
+Check realm rules                                                                                    (00:00.003 / 00:38.263, 806Mb)
+Previous Version Comparison                                                                          (00:00.002 / 00:38.265, 806Mb)
+Validating Resources                                                                                 (00:09.169 / 00:47.435, 1Gb)
+Processing Provenance Records                                                                        (00:00.027 / 00:47.462, 1Gb)
+Generating Outputs in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/output (00:00.002 / 00:47.465, 1Gb)
+Warning @ Git URL is not a valid URl. Source: git remote origin url
+Generate Native Outputs                                                                              (00:00.142 / 00:47.607, 1Gb)
+Run Template                                                                                         (00:00.658 / 00:48.265, 1Gb)
+Generate HTML Outputs                                                                                (00:02.317 / 00:50.582, 1Gb)
+Generate Spreadsheets                                                                                (00:00.929 / 00:51.511, 1Gb)
+Generate Summaries                                                                                   (00:01.256 / 00:52.768, 1Gb)
+Generating Summary Outputs                                                                           (00:00.003 / 00:52.771, 1Gb)
+DB Cumulative Time invested: 00:00:00.80
+Sending Usage Stats to Server                                                                        (00:07.844 / 01:00.615, 1Gb)
+## Memory (MB): Use = 1064, Free = 885, Total = 1950, Max = 2048                                     (00:00.002 / 01:00.618, 1Gb)
+Reclaiming memory...                                                                                 (00:00.004 / 01:00.622, 1Gb)
+## Memory (MB): Use = 901, Free = 1048, Total = 1950, Max = 2048                                     (00:00.738 / 01:01.361, 902Mb)
+Run jekyll: jekyll build --destination "/Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/output" (in folder /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/temp/pages) (00:00.003 / 01:01.364, 902Mb)
+Troubleshooting Note: usual cases for Jekyll to fail are:                                            (00:00.003 / 01:01.367, 902Mb)
+* A failure to produce a fragment that is already logged in the output above                         (00:00.002 / 01:01.370, 902Mb)
+* A reference to a manually edited file that hasn't been provided                                    (00:00.001 / 01:01.371, 902Mb)
+Jekyll: Source: /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/temp/pages (00:01.498 / 01:02.870, 903Mb)
+Jekyll: Generating...                                                                                (00:00.001 / 01:02.872, 903Mb)
+Jekyll: done in 1.817 seconds.                                                                       (00:01.815 / 01:04.687, 903Mb)
+
+Installing ca.argentixinfo.howtopub#1.1.0
+Checking Output HTML                                                                                 (00:00.253 / 01:04.941, 954Mb)
+found 570 files                                                                                      (00:00.007 / 01:04.949, 954Mb)
+........................................
+........................................
+  ... 570 html files, 0 pages invalid xhtml (0%)                                                     (00:01.425 / 01:06.374, 919Mb)
+  ... 8918 links, 0 broken links (0%)                                                                (00:00.004 / 01:06.378, 919Mb)
+Generate fragment-usage-analysis.csv                                                                 (00:00.003 / 01:06.381, 919Mb)
+Build final .zip                                                                                     (00:00.014 / 01:06.396, 920Mb)
+Final .zip built                                                                                     (00:01.298 / 01:07.694, 930Mb)
+Built. Times: loading: 00:00.923, generate: 00:34.676, narrative generation: 00:00.432, realm-rules: 00:00.002, previous-version: 00:09.162, jekyll: 00:03.334, validation: 00:01.897 (#3), template: 00:02.329 (#3) (00:02.902 / 01:10.596, 977Mb)
+Generating QA                                                                                        (00:00.003 / 01:10.600, 977Mb)
+Validation output in /Users/elliot/src/publication/temp/ca.argentixinfo.howtopub#1.1.0-milestone/output/qa.html
+Errors: 0, Warnings: 0, Info: 1, Broken Links: 0 (00:00.054 / 01:10.655, 995Mb)
+Finished. Max Memory Used = 1Gb. Log file saved in /var/folders/wy/qyscnv3n0v76wp03lr9nvbsw0000gn/T/fhir-ig-publisher-tmp.log (00:00.006 / 01:10.661, 995Mb)
+Keep a copy of the build directory at /Users/elliot/src/publication/temp/web-root/run-20250220/ig-build-zips/ca.argentixinfo.howtopub#1.1.0.zip
+
+ok. All checks passed. Publish v1.1.0 to /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub/1.1.0
+Copy the IG to /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub/1.1.0
+Update /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub/package-list.json
+Publish Box Statement: This page is part of the How to Publish a FHIR Implementation Guide (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a>
+  .. 22 files checked, 22 updated
+  .. 15 clones checked, 30 updated
+  .. 3 redirections (3 created/updated)
+This is a milestone release - publish v1.1.0 to /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub
+Update publish box for version 1.0.0 @ http://argentixinfo.com/ig/howtopub/1.0.0
+Publish Box Statement: This page is part of the How to Publish a FHIR Implementation Guide (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. The current version which supersedes this version is <a no-external="true" href="http://argentixinfo.com/ig/howtopub{{fn}}">1.1.0</a>.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a>
+  .. 21 files checked, 21 updated
+  .. 9 clones checked, 0 updated
+Publish Box Statement: This page is part of the How to Publish a FHIR Implementation Guide (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a>
+  .. 22 files checked, 22 updated
+  .. 15 clones checked, 30 updated
+  .. 3 redirections (3 created/updated)
+Check for Files to delete
+  ... 0 files
+Copy to new IG to /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub
+ca.argentixinfo.howtopub (http://argentixinfo.com/ig/howtopub): How to Publish a FHIR Implementation Guide @ http://build.fhir.org/ig/ElliotSilver/how-to-publish
+  release: Release 1 1.1.0/4.0.1 @ http://argentixinfo.com/ig/howtopub/1.1.0
+Build is complete. Copy from /Users/elliot/src/publication/temp/web-root/run-20250220
+Update history page at /Users/elliot/src/publication/temp/web-root/run-20250220/howtopub from /Users/elliot/src/ig-history and /Users/elliot/src/publication/templates

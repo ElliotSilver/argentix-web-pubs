@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - How to Publish a FHIR Implementation Guide v1.0.0</title>
+    <title>Home - How to Publish a FHIR Implementation Guide v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -34,31 +35,24 @@
     <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
     <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRT1YNT4PQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-MRT1YNT4PQ');
-    </script>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">How to Publish a FHIR Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0 - release
 
 
 
@@ -108,6 +102,9 @@
     <a href="about.html">About</a>
   </li>
   <li>
+    <a href="changes.html">Change History</a>
+  </li>
+  <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>
@@ -142,7 +139,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the How to Publish a FHIR Implementation Guide (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the How to Publish a FHIR Implementation Guide (v1.1.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://argentixinfo.com/ig/howtopub/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -157,7 +154,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">1.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub|1.0.0"/></span>
+      <span class="copy-text">1.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub|1.1.0"/></span>
       </td>
     </tr>
 
@@ -173,7 +170,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2024-11-09
+            as of 2025-02-20
           
         
       </td>
@@ -200,14 +197,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#ci-auto-build" id="markdown-toc-ci-auto-build">CI Auto-build</a></li>
-  <li><a href="#upload" id="markdown-toc-upload">Upload to a Web Server or Github Pages</a></li>
+  <li><a href="#upload" id="markdown-toc-upload">Simple Upload to a Web Server or Github Pages</a></li>
   <li><a href="#publication-using-simplifier" id="markdown-toc-publication-using-simplifier">Publication using Simplifier</a></li>
-  <li><a href="#using-ig-publishers--go-publish-function" id="markdown-toc-using-ig-publishers--go-publish-function">Using IG Publisher’s <code class="language-plaintext highlighter-rouge">-go-publish</code> Function</a></li>
+  <li><a href="#using-ig-publishers--go-publish-function" id="markdown-toc-using-ig-publishers--go-publish-function">Using IG Publisher's <code class="language-plaintext highlighter-rouge">-go-publish</code> Function</a></li>
   <li><a href="#next-steps" id="markdown-toc-next-steps">Next Steps</a></li>
 </ul>
 
 </div>
-<p>Many implementation guide (IG) authors are familiar with using <a href="http://hl7.org">HL7</a>’s <a href="https://github.com/HL7/fhir-ig-publisher">IG Publisher</a> to author and build an implementation guide. However the process of actually “publishing” an authored IG is less familiar to many. To make an IG available to the public (or at least to a larger audience than the author), it should be on an accessible website. Further, various FHIR tooling depends being able to find an IG and its packages listed in the central registries. This IG documents the process of publishing an IG to a website using IG Publisher. It also discusses the differences between “publishing” a FHIR IG by simply uploading the IG build output to your web server; and, by uploading the results of the IG Publisher <code class="language-plaintext highlighter-rouge">-go-publish</code> functionality.</p>
+<p>Many implementation guide (IG) authors are familiar with using <a href="http://hl7.org">HL7</a>'s <a href="https://github.com/HL7/fhir-ig-publisher">IG Publisher</a> to author and build an implementation guide. However the process of actually "publishing" an authored IG is less familiar to many. To make an IG available to the public (or at least to a larger audience than the author), it should be on an accessible website. Further, various FHIR tooling depends being able to find an IG and its packages listed in the central registries. This IG documents the process of publishing an IG to a website using IG Publisher. It also discusses the differences between "publishing" a FHIR IG by simply uploading the IG build output to your web server; and, by uploading the results of the IG Publisher <code class="language-plaintext highlighter-rouge">-go-publish</code> functionality.</p>
 
 <p>This IG is not a tutorial on IG authoring; on general IG Publisher usage; or, on related tooling, such as <a href="https://fshschool.org">SUSHI</a>.</p>
 
@@ -219,62 +216,64 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Using the <a href="#using-ig-publishers--go-publish-function">IG Publisher <code class="language-plaintext highlighter-rouge">-go-publish</code></a> function to stage an IG publication, then upload it to a website.</li>
 </ul>
 
-<p>Alternatively, the IG could be authored and published through <a href="https://fire.ly">Firely</a>’s <a href="https://simplifier.net">Simplifier</a> product.</p>
+<p>Alternatively, the IG could be authored and published through <a href="https://fire.ly">Firely</a>'s <a href="https://simplifier.net">Simplifier</a> product.</p>
 
-<p>Let’s briefly consider each of these approaches.</p>
+<p>Before briefly discussing each of these approaches, let's consider the goals of "publication" and when it is typically appropriate. Obviously, an author wants to publish their Implementation Guide to get it in front of a wider audience. But for what purpose? The author may be seeking feedback on an in-process guide, or may want an "official" release made available. Implementers want a fixed, identifiable version to base their implementation on; a version that aligns with what their exchange partners are using for their implementations. Although it is possible to publish, and keep, every version throughout the development process of the guide, most authors won't do this. Only key versions are published, often along side the single, most recent development (or continuous integration, CI) build. Once published, there is usually an expectation that an IG remain available to the readership for historical reference. Along with publication, most authors want the various FHIR registries to list their guide and to index the technical content, in the form of an NPM package.</p>
 
 <h3 id="ci-auto-build">CI Auto-build</h3>
 
-<p>IG Publisher users who store their projects on <a href="http://github.com">Github</a> can make use of the <a href="https://github.com/FHIR/auto-ig-builder">IG auto-build</a> to “publish” their IG to the FHIR continuous integration site under <code class="language-plaintext highlighter-rouge">build.fhir.org</code>. This is a convenient way to allow others to see your implementation guide.</p>
+<p>IG Publisher users who store their projects on <a href="http://github.com">Github</a> can make use of the <a href="https://github.com/FHIR/auto-ig-builder">IG auto-build</a> to "publish" their IG to the FHIR continuous integration site under <code class="language-plaintext highlighter-rouge">build.fhir.org</code>. This is a convenient way to allow others to see your implementation guide.</p>
 
 <p>However, there are some drawbacks:</p>
 
 <ul>
-  <li>Warnings at the top of each page of the IG that the document is “not an authorized publication,” is the “continuous integration build,” and “changes regularly.”</li>
+  <li>Warnings at the top of each page of the IG that the document is "not an authorized publication," is the "continuous integration build," and "changes regularly."</li>
   <li>Canonical URLs are not permitted to be located under <a href="http://build.fhir.org">http://build.fhir.org</a></li>
   <li>Canonical URLs are not redirected to the appropriate resource or resource page (see below)</li>
   <li>Extremely limited support for multiple releases. Although different branches of an IG repo can be uploaded, there is no cross-referencing between them.</li>
-  <li>No history page is generated, and any links to “directory of published versions” are broken</li>
+  <li>No history page is generated, and any links to "directory of published versions" are broken</li>
   <li>No registration of the IG and IG package with FHIR tooling feeds</li>
   <li>Unstable availability (see below)</li>
 </ul>
 
-<p>“Canonical redirect” is the resolution of the canonical URLs which identify the IG as well as IG profiles, CodeSystem, ValueSet, and so on, to the appropriate content. For example, the url <a href="http://example.com/ig/myig/StructureDefinition/MyPatient"><code class="language-plaintext highlighter-rouge">http://example.com/ig/myig/StructureDefinition/MyPatient</code></a> is expected to return an HTML descriptive page, or JSON- or XML-formatted StructureDefinition resource representation depending on the web request. This capability depends on both the IG being published at the location that the canonical URL references, and having appropriate website configuration or redirect scripts.</p>
+<p>"Canonical redirect" is the resolution of the canonical URLs which identify the IG as well as IG profiles, CodeSystem, ValueSet, and so on, to the appropriate content. For example, the url <a href="http://example.com/ig/myig/StructureDefinition/MyPatient"><code class="language-plaintext highlighter-rouge">http://example.com/ig/myig/StructureDefinition/MyPatient</code></a> is expected to return an HTML descriptive page, or JSON- or XML-formatted StructureDefinition resource representation depending on the web request. This capability depends on both the IG being published at the location that the canonical URL references, and having appropriate website configuration or redirect scripts.</p>
 
-<p>The fact that the CI build content changes any time an update is made to your repository makes using the auto-build unsuitable for long-term availability of milestone releases. Further, CI build content for your IG’s non-main branch may be purged to save space; the main branch content has also occasionally been purged. The CI auto-build is not a good approach to long-term publishing.</p>
+<p>The fact that the CI build content changes any time an update is made to your repository makes using the auto-build unsuitable for long-term availability of milestone releases. Further, CI build content for your IG's non-main branch may be purged to save space; the main branch content has also occasionally been purged. The CI auto-build is not a good approach to long-term publishing.</p>
 
 <p>On the other hand, the auto-build is a decent way to make your continuous integration builds, or other temporary IG versions, available for a limited time, such as sharing your in-progress work with your collaborators.</p>
 
 <p>Note that the IG Publisher publication process described in this IG can reference auto-built IGs as part of the history of published versions, and in the registry feeds.</p>
 
-<h3 id="upload">Upload to a Web Server or Github Pages</h3>
+<h3 id="upload">Simple Upload to a Web Server or Github Pages</h3>
 
-<p>Another option to make your content available, is to upload the contents of the IG Publisher-generated <code class="language-plaintext highlighter-rouge">output</code> directory directly to a web server, or to copy it to <a href="http://github.io">Github Pages</a>. (Setting up automated builds and copying to Github Pages is covered in the <a href="http://www.argentixinfo.com/archives/156">author’s blog</a>.)</p>
+<p>To make your content available, another option is to upload the contents of the IG Publisher-generated <code class="language-plaintext highlighter-rouge">output</code> directory <em>directly</em> to a web server, or to copy it to <a href="http://github.io">Github Pages</a>. (Setting up automated builds and copying to Github Pages is covered in the <a href="http://www.argentixinfo.com/archives/156">author's blog</a>.)</p>
 
 <p>This is essentially the same as using the auto-build, except that the output ends up on your website, rather than on <a href="http://build.fhir.org/ig">build.fhir.org</a>. And, this approach has many of the same issues as the CI auto-build.</p>
 
 <ul>
-  <li>A “local development build” warning box on each page of the IG</li>
-  <li>Canonical URLs are not redirected to the appropriate resource or resource page (although your web server configuration could theoretically address this)</li>
+  <li>A "local development build" warning box on each page of the IG</li>
+  <li>Canonical URLs are not redirected to the appropriate resource or resource page (although your web server configuration or scripts could theoretically address this)</li>
   <li>Extremely limited support for multiple releases. Although different releases of an IG could be uploaded, there is no cross-referencing between them.</li>
-  <li>No history page is generated, and any links to “directory of published versions” are broken</li>
+  <li>No history page is generated, and any links to "directory of published versions" are broken</li>
   <li>No registration of the IG and IG package with FHIR tooling feeds</li>
 </ul>
 
-<p>Although uploading to your own web server won’t be subject to unplanned removal of IG versions, it offers few other benefits compared to use of the auto-build.</p>
+<p>Although uploading to your own web server won't be subject to unplanned removal of IG versions, it offers few other benefits compared to use of the auto-build.</p>
 
-<p>Note that the IG Publisher publication process described in this IG can reference continuous integration builds uploaded to your website as part of the history of published versions, and in the registry feeds.</p>
+<p>The limitations described here around using your own website or GitHub pages are only applicable when doing a simple upload. This IG describes processes to address these issues. Also, the process described in this IG can reference continuous integration builds uploaded to your website as part of the history of published versions, and in the registry feeds.</p>
+
+<p>It is worth noting that certain limitations, such as not being included in the registries, may be desirable in some cases, for example, to authors working on non-public guides.</p>
 
 <h3 id="publication-using-simplifier">Publication using Simplifier</h3>
 
-<p>One of key and early decisions in authoring an IG is whether to use HL7’s IG publisher or <a href="https://fire.ly">Firely</a>’s <a href="https://simplifier.net">Simplifier</a>. Factors to consider between the two include:</p>
+<p>One of key and early decisions in authoring an IG is whether to use HL7's IG publisher or <a href="https://fire.ly">Firely</a>'s <a href="https://simplifier.net">Simplifier</a>. Factors to consider between the two include:</p>
 
 <ul>
   <li>Commercial vs open source model, and associated factors including cost, license, support, stability</li>
-  <li>Enforcement of “best practices,” error checking and “correctness”</li>
-  <li>Integration with resource authoring tools such as <a href="https://fire.ly/products/forge/">Firely’s Forge</a> or HL7’s <a href="http://hl7.org/fhir/uv/shorthand/">FSH</a> language compiler, <a href="https://fshschool.org">SUSHI</a>. (Both tools can be used with either publication mechanism)</li>
-  <li>Command-line “compiler”-style interface vs. WYSIWYG</li>
-  <li>Content management and versioning approach during authoring (including “release” management and Github integration)</li>
+  <li>Enforcement of "best practices," error checking and "correctness"</li>
+  <li>Integration with resource authoring tools such as <a href="https://fire.ly/products/forge/">Firely's Forge</a> or HL7's <a href="http://hl7.org/fhir/uv/shorthand/">FSH</a> language compiler, <a href="https://fshschool.org">SUSHI</a>. (Both tools can be used with either publication mechanism)</li>
+  <li>Command-line "compiler"-style interface vs. WYSIWYG</li>
+  <li>Content management and versioning approach during authoring (including "release" management and Github integration)</li>
   <li>Control over look-and-feel, ADA compliance, and multi-language support</li>
   <li>Local vs. online; desktop control vs. SaaS.</li>
 </ul>
@@ -283,11 +282,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Publishing on your own website provides an additional level of control, and sense of ownership, that many prefer. Note though, that it is possible to download and self-host a Simplifier IG.</p>
 
-<p>If you use the Simplifier development tooling, the publication considerations discussed in this document don’t apply. As pointed out above, though, publication considerations should be only one part of the decision. Both the IG publisher and Simplifier continue to evolve, and the comparative features and differentiators will change.</p>
+<p>If you use the Simplifier development tooling, the publication considerations discussed in this document don't apply. As pointed out above, though, publication considerations should be only one part of the decision. Both the IG publisher and Simplifier continue to evolve, and the comparative features and differentiators will change.</p>
 
-<h3 id="using-ig-publishers--go-publish-function">Using IG Publisher’s <code class="language-plaintext highlighter-rouge">-go-publish</code> Function</h3>
+<h3 id="using-ig-publishers--go-publish-function">Using IG Publisher's <code class="language-plaintext highlighter-rouge">-go-publish</code> Function</h3>
 
-<p>The HL7 IG Publisher can be used to build an IG from source resources and narrative content. The output of an IG Publisher build may be uploaded to a website or made available through the CI auto-build, as described above. Using the IG Publisher’s <code class="language-plaintext highlighter-rouge">-go-publish</code> functionality, it can also be used to prepare the generated content for publication, addressing several deficiencies in the basic output:</p>
+<p>The HL7 IG Publisher can be used to build an IG from source resources and narrative content. The output of an IG Publisher build may be uploaded to a website or made available through the CI auto-build, as described above. Using the IG Publisher's <code class="language-plaintext highlighter-rouge">-go-publish</code> functionality, it can also be used to prepare the generated content for publication, addressing several deficiencies in the basic output:</p>
 
 <ul>
   <li>The box at the top of each page is modified to indicate that this is a proper publication of the IG; it indicates which IG version you are viewing, what the current (most recent) version is, and includes a link to a history page with all published IG versions listed.</li>
@@ -304,7 +303,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The remainder of this implementation guide discusses the one-time process needed to <a href="./setup.html">set up</a> an environment for publication, and the process needed to publish each release of <a href="./publication.html">each publication</a>.</p>
 
-<p>As a pre-requisite for the processes described in this guide, you should have write access to a website that you control, and be familiar with the process for uploading content to it. This guide assumes your publication website aligns with the canonical URLs for your IGs. (Alignment of canonicals is not strictly necessary; however, this is the most common approach, and some functionality won’t work unless the canonicals align.) You should also be familiar with basic use of the IG Publisher, use of the <code class="language-plaintext highlighter-rouge">git</code> source control tool, and have access to the <a href="http://github.com">Github</a> website. Github access is needed to obtain or modify certain HL7 resources. The guide describes use of Github to manage your IG as well, however you may use other (or no) content management tools for your IG and publication.</p>
+<p>As a pre-requisite for the processes described in this guide, you should have write access to a website that you control, and be familiar with the process for uploading content to it. This guide assumes your publication website aligns with the canonical URLs for your IGs. (Alignment of canonicals is not strictly necessary; however, this is the most common approach, and some functionality won't work unless the canonicals align.) You should also be familiar with basic use of the IG Publisher, use of the <code class="language-plaintext highlighter-rouge">git</code> source control tool, and have access to the <a href="http://github.com">Github</a> website. Github access is needed to obtain or modify certain HL7 resources. The guide describes use of Github to manage your IG as well, however you may use other (or no) content management tools for your IG and publication.</p>
 
 <p><a href="./references.html">References</a> to background material are included, as is a trivial profile of a <a href="./artifacts.html">resource</a> which can be used to observe canonical resolution behaviour.</p>
 
@@ -332,7 +331,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://argentixinfo.com">Argentix Informatics, Inc.</a>.  Package ca.argentixinfo.howtopub#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Nov 9, 2024 11:47-0800">2024-11-09</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://argentixinfo.com">Argentix Informatics, Inc.</a>.  Package ca.argentixinfo.howtopub#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 20, 2025 21:19-0800">2025-02-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -349,7 +348,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -360,7 +359,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>
