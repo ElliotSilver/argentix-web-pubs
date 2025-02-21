@@ -7,16 +7,16 @@
       "canonical" : "http://argentixinfo.com/ig/howtopub",
       "category" : "Infrastructure",
       "ci-build" : "http://build.fhir.org/ig/ElliotSilver/how-to-publish",
-      "version-count" : 1,
+      "version-count" : 2,
       "latest" : {
-        "version" : "1.0.0",
-        "date" : "2024-11-09",
-        "path" : "http://argentixinfo.com/ig/howtopub/1.0.0"
+        "version" : "1.1.0",
+        "date" : "2025-02-20",
+        "path" : "http://argentixinfo.com/ig/howtopub/1.1.0"
       },
       "milestone" : {
-        "version" : "1.0.0",
-        "date" : "2024-11-09",
-        "path" : "http://argentixinfo.com/ig/howtopub/1.0.0"
+        "version" : "1.1.0",
+        "date" : "2025-02-20",
+        "path" : "http://argentixinfo.com/ig/howtopub/1.1.0"
       }
     }
   ]

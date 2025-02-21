@@ -8,19 +8,10 @@
     span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
     span.toggle  { font-size: 10px }
   </style>
-  <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRT1YNT4PQ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-MRT1YNT4PQ');
-    </script>
-  </head>
+</head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for HowToPubIG</h1>
- <p>Generated Sat Nov 09 11:48:04 PST 2024, FHIR version 4.0.1 for ca.argentixinfo.howtopub#1.0.0 (canonical = <a href="http://argentixinfo.com/ig/howtopub">http://argentixinfo.com/ig/howtopub</a> (<a href="http://argentixinfo.com/ig/howtopub/history.html">history</a>))</p>
+ <p>Generated Thu Feb 20 21:20:20 PST 2025, FHIR version 4.0.1 for ca.argentixinfo.howtopub#1.1.0 (canonical = <a href="http://argentixinfo.com/ig/howtopub">http://argentixinfo.com/ig/howtopub</a> (<a href="http://argentixinfo.com/ig/howtopub/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -28,16 +19,72 @@
     <b>x-system-cache-id</b>
 :     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
   </li>
+  <li>
+    <b>displayLanguage</b>
+:     <code>en-US</code>
+  </li>
 </ul>
 <h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
-<ul>
-  <li>(No Errors/Reports - all good)</li>
-</ul>
+<p>
+  <b>Decisions</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>Message</b>
+    </td>
+    <td>
+      <b>Server</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Systems</b>
+    </td>
+    <td>
+      <b>Choices</b>
+    </td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>auth = , candidates=</td>
+  </tr>
+</table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 0. Code Systems used: </p>
-<ul>
-  <li>(None)</li>
-</ul>
+<p>Use Count: 1. Code Systems used: </p>
+<table class="grid">
+  <tr>
+    <th>
+      <b>System</b>
+    </th>
+    <th>
+      <b>#Exp.</b>
+    </th>
+    <th>
+      <b>#Val.</b>
+    </th>
+    <th>
+      <b>Details</b>
+    </th>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+</table>
 </body>
 </html>

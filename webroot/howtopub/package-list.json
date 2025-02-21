@@ -8,13 +8,23 @@
       "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
     },
     {
+      "version" : "1.1.0",
+      "path" : "http://argentixinfo.com/ig/howtopub/1.1.0",
+      "status" : "release",
+      "sequence" : "Release 1",
+      "fhirversion" : "4.0.1",
+      "date" : "2025-02-20",
+      "current" : true,
+      "desc" : "Reflect new publication request content, and incorporate feedback.",
+      "changes" : "changes.html"
+    },
+    {
       "version" : "1.0.0",
       "path" : "http://argentixinfo.com/ig/howtopub/1.0.0",
       "status" : "release",
       "sequence" : "Release 1",
       "fhirversion" : "4.0.1",
       "date" : "2024-11-09",
-      "current" : true,
       "desc" : "Initial release as presented at FHIR North."
     }
   ],

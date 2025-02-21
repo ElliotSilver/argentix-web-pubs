@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ca.argentixinfo.howtopub</b></p><a name=\"ca.argentixinfo.howtopub\"> </a><a name=\"hcca.argentixinfo.howtopub\"> </a><a name=\"ca.argentixinfo.howtopub-en-US\"> </a><h2>HowToPubIG</h2><p>The official URL for this implementation guide is: </p><pre>http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub</pre><div><p>A Guide to HL7 IG Publisher's -go-publish feature</p>\n</div></div>"
   },
   "url" : "http://argentixinfo.com/ig/howtopub/ImplementationGuide/ca.argentixinfo.howtopub",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "HowToPubIG",
   "title" : "How to Publish a FHIR Implementation Guide",
   "status" : "active",
-  "date" : "2024-11-09T11:47:41-08:00",
+  "date" : "2025-02-20T21:19:09-08:00",
   "publisher" : "Argentix Informatics, Inc.",
   "contact" : [{
     "name" : "Argentix Informatics, Inc.",
@@ -54,7 +54,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.0.2"
+    "version" : "6.2.0"
   },
   {
     "id" : "hl7ext",
@@ -64,7 +64,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   }],
   "definition" : {
     "extension" : [{
@@ -344,7 +344,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#0.2.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.3.0"
     },
     {
       "extension" : [{
@@ -705,6 +705,15 @@
         }],
         "nameUrl" : "about.html",
         "title" : "About",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "changes.html"
+        }],
+        "nameUrl" : "changes.html",
+        "title" : "Change History",
         "generation" : "markdown"
       }]
     },

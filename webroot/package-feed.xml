@@ -4,12 +4,23 @@
       <description>FHIR Implementation Guide Packages published by Argentix Informatics, Inc.</description>
       <link>http://argentixinfo.com/ig</link>
       <generator>Argentix Informatics, Inc.</generator>
-      <lastBuildDate>Sat, 09 Nov 2024 11:45:45 -0800</lastBuildDate>
+      <lastBuildDate>Thu, 20 Feb 2025 09:17:09 -0800</lastBuildDate>
       <atom:link href="http://argentixinfo.com/ig/package-feed.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Sat, 09 Nov 2024 11:45:45 -0800</pubDate>
+      <pubDate>Thu, 20 Feb 2025 09:17:09 -0800</pubDate>
       <language>en</language>
       <ttl>600</ttl>
       <item>
+      <title>ca.argentixinfo.howtopub#1.1.0</title>
+      <description>Reflect new publication request content, and incorporate feedback.</description>
+      <link>http://argentixinfo.com/ig/howtopub/1.1.0/package.tgz</link>
+      <guid isPermaLink="true">http://argentixinfo.com/ig/howtopub/1.1.0/package.tgz</guid>
+      <dc:creator>Argentix Informatics, Inc.</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Thu, 20 Feb 2025 09:17:09 -0800</pubDate>
+      <fhir:details xmlns:fhir="Publication run at 20/02/2025 by elliot using vVersion 1.8.13 (Git# e89cdedc7f58). Built 2025-02-17T04:21:57.376Z (4 days old) source id Unknown (todo)" value=""/>
+    </item>
+    <item>
       <title>ca.argentixinfo.howtopub#1.0.0</title>
       <description>Initial release as presented at FHIR North.</description>
       <link>http://argentixinfo.com/ig/howtopub/1.0.0/package.tgz</link>
